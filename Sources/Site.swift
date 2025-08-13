@@ -24,4 +24,19 @@ struct ExampleSite: Site {
 
     var homePage = Home()
     var layout = MainLayout()
+    
+    var lightTheme = LightTheme()
+    var darkTheme = DarkTheme()
+}
+
+struct LightTheme: Theme {
+    var colorScheme: Ignite.ColorScheme = .light
+    
+    var accent: Color = Color(hex: "#4B700A")
+}
+
+struct DarkTheme: Theme {
+    var colorScheme: Ignite.ColorScheme = .dark
+    
+    var accent: Color = Color(hex: "#BCF45E")
 }

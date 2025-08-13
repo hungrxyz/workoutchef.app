@@ -10,8 +10,10 @@ struct Home: StaticPage {
                 .font(.title1)
                 .fontWeight(.heavy)
             
-            Text("Create custom workouts for Apple Watch")
-                .font(.title6)
+            Text("Build workouts that fit you.")
+                .font(.title4)
+            
+            Text("Send them straight to your Apple Watch and train without thinking about what’s next.")
             
             Image("/images/AppIcon.png")
                 .aspectRatio(1, contentMode: .fit)
@@ -19,11 +21,28 @@ struct Home: StaticPage {
                 .cornerRadius(56)
                 .clipped()
             
-            Text {
-                Link("View in TestFlight", target: "https://testflight.apple.com/join/nwYM84YA")
-                    .linkStyle(.button)
+            Form {
+                TextField("Email", prompt: "john@doe.com")
+                    .type(.email)
+                    .customAttribute(name: "name", value: "email")
+                    .required()
+                
+                TextField("Purpose", prompt: "What’s your main activity?")
+                    .type(.text)
+                    .customAttribute(name: "name", value: "activity")
+                
+                Button("Join Waitlist")
                     .role(.primary)
+                    .type(.submit)
             }
+            .labelStyle(.hidden)
+            .class("launchlist-form")
+            .attribute("action", "https://getlaunchlist.com/s/u64q47")
+            .attribute("method", "POST")
+            
+            Script(code: "")
+                .attribute("src", "https://getlaunchlist.com/js/widget-diy.js")
+                .attribute("defer")
             
             Spacer(size: 200)
         }
