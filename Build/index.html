@@ -64,25 +64,31 @@
   </head>
   <body class="container">
     <div class="ig-main-content">
-      <div class="vstack" style="gap: 20px">
-        <div style="height: 25px"></div>
-        <div class="ratio mb-0 align-self-center" style="--bs-aspect-ratio: 100.0%; width: 250px; border-radius: 56px; overflow: hidden">
-          <img src="/images/AppIcon.png" alt="" class="object-fit-contain" />
+      <header>
+        <nav class="fixed-top material-thin navbar navbar-expand-md">
+          <div class="container flex-wrap flex-lg-nowrap">
+            <div class="me-2 me-md-auto">
+              <a href="/" class="d-inline-flex align-items-center navbar-brand"><span style="display: inline-flex; align-items: center"><img src="/images/AppIcon.png" alt="WorkoutChef logo" style="width: 30px; height: 30px; border-radius: 6px; margin-right: 10px" /><strong style="font-weight: 600">WorkoutChef</strong></span></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div style="height: 100px"></div>
+      <div class="vstack" style="gap: 25px">
+        <h1 class="text-center mb-0 align-self-center" style="font-weight: 700">Your workouts. Structured on Apple Watch.</h1>
+        <p class="text-center col-md-8 mb-0 align-self-center" style="color: rgb(128 128 128 / 100%)">WorkoutChef turns any workout — whether from ChatGPT, TikTok, or one you create yourself — into a clear, guided plan on your Apple Watch.</p>
+        <div class="mb-0 align-self-center card">
+          <div class="card-body">
+            <form id="q3MTA" action="https://getlaunchlist.com/s/u64q47" method="POST" class="launchlist-form row g-3">
+              <div class="col-md-12">
+                <input id="c6oor" placeholder="Email" type="email" required name="email" class="form-control col-md-12" />
+              </div>
+              <div class="col-md-12 d-flex align-items-end">
+                <button type="submit" class="col-md-12 w-100 btn btn-primary" style="background-color: #A5DB61; color: rgb(0 0 0 / 100%); border-color: #A5DB61; font-weight: bold">Get Early Access</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <h1 class="text-center mb-0 align-self-center" style="font-weight: 900">WorkoutChef</h1>
-        <h6 class="text-center mb-0 align-self-center">Build workouts that fit you.</h6>
-        <p class="text-body-secondary text-center mb-0 align-self-center">Send them straight to your Apple Watch and train without thinking about what’s next.</p>
-        <form id="QvrH8" action="https://getlaunchlist.com/s/u64q47" method="POST" class="launchlist-form mb-0 align-self-center row g-3">
-          <div class="col-md-12">
-            <input id="qwTz5" placeholder="Email" type="email" required name="email" class="form-control col-md-12" />
-          </div>
-          <div class="col-md-12">
-            <input id="ymAmJ" placeholder="What type of workouts do you do? e.g. Run, HIIT, Strength Training,..." type="text" name="activity" class="form-control col-md-12" />
-          </div>
-          <div class="col-md-12 d-flex align-items-end">
-            <button type="submit" class="col-md-12 w-100 btn btn-primary" style="background-color: #A5DB61; color: rgb(0 0 0 / 100%); border-color: #A5DB61; font-weight: bold">Join Waitlist</button>
-          </div>
-        </form>
       </div>
     </div>
     <p class="text-center mt-5">Created in Swift with <a href="https://github.com/twostraws/Ignite">Ignite</a></p>
