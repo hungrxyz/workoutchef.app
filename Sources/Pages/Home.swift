@@ -23,7 +23,7 @@ struct Home: StaticPage {
         
         Spacer(size: 100)
         
-        VStack(spacing: 25) {
+        VStack(spacing: 50) {
             Text("Your workouts, guided on Apple Watch.")
                 .font(.title1)
                 .fontWeight(.bold)
@@ -63,11 +63,21 @@ struct Home: StaticPage {
                 .attribute("method", "POST")
             }
             
+            HStack {
+                Text("Import or create. Send to Apple Watch. Train with structure.")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .horizontalAlignment(.leading)
+                
+                Spacer()
+            }
+            
             Grid(alignment: .center) {
                 VStack {
-                    Text("Import workout")
+                    Text("Import any workout in seconds")
                         .font(.title4)
                         .fontWeight(.semibold)
+                        .foregroundStyle(.black)
                         .horizontalAlignment(.center)
                         .padding()
                     
@@ -87,7 +97,7 @@ struct Home: StaticPage {
                 .cornerRadius(60)
                 
                 VStack {
-                    Text("or create your own")
+                    Text("Build your own, your way")
                         .font(.title4)
                         .fontWeight(.semibold)
                         .foregroundStyle(.white)
@@ -110,9 +120,10 @@ struct Home: StaticPage {
                 .cornerRadius(60)
                 
                 VStack {
-                    Text("and follow the buzz")
+                    Text("Feel the buzz, know what’s next")
                         .font(.title4)
                         .fontWeight(.semibold)
+                        .foregroundStyle(.black)
                         .horizontalAlignment(.center)
                         .padding()
                     
