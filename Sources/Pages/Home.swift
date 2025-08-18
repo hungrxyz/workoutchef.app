@@ -2,7 +2,7 @@ import Foundation
 import Ignite
 
 struct Home: StaticPage {
-    var title = "Home"
+    var title = "WorkoutChef"
 
     var body: some HTML {
         NavigationBar {

@@ -17,7 +17,9 @@ struct IgniteWebsite {
 struct ExampleSite: Site {
     
     var name = "WorkoutChef"
+    var titleSuffix = " | Get Early Access"
     var url = URL(static: "https://workoutchef.app")
+    var favicon = URL(string: "images/favicon.ico")
     var builtInIconsEnabled = true
 
     var author = "@markotect"
