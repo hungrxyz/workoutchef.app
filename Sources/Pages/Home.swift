@@ -24,12 +24,12 @@ struct Home: StaticPage {
         Spacer(size: 100)
         
         VStack(spacing: 25) {
-            Text("Your workouts. Structured on Apple Watch.")
+            Text("Your workouts, guided on Apple Watch.")
                 .font(.title1)
                 .fontWeight(.bold)
                 .horizontalAlignment(.center)
             
-            Text("WorkoutChef turns any workout — whether from ChatGPT, TikTok, or one you create yourself — into a clear, guided plan on your Apple Watch.")
+            Text("Import a workout from ChatGPT, TikTok or create your own. WorkoutChef makes it a structured, follow-along plan on your Apple Watch. With haptics and interval guidance, you stay in the flow. No phone, no guessing, just training.")
                 .font(.body)
                 .foregroundStyle(Color.gray)
                 .horizontalAlignment(.center)
@@ -62,6 +62,69 @@ struct Home: StaticPage {
                 .attribute("action", "https://getlaunchlist.com/s/u64q47")
                 .attribute("method", "POST")
             }
+            
+            Grid(alignment: .center) {
+                VStack {
+                    Text("Import workout")
+                        .font(.title4)
+                        .fontWeight(.semibold)
+                        .horizontalAlignment(.center)
+                        .padding()
+                    
+                    ZStack {
+                        Image("images/Screenshot-Import.png")
+                            .resizable()
+                            .frame(maxWidth: 315)
+                            .cornerRadius(45)
+                        
+                        Image("images/iPhone 16 Pro - Natural Titanium - Portrait.png")
+                            .resizable()
+                            .frame(maxWidth: 350)
+                    }
+                }
+                .padding()
+                .background(Color(hex: "#A5DB61"))
+                .cornerRadius(60)
+                
+                VStack {
+                    Text("or create your own")
+                        .font(.title4)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                        .horizontalAlignment(.center)
+                        .padding()
+                    
+                    ZStack {
+                        Image("images/Screenshot-Editor.png")
+                            .resizable()
+                            .frame(maxWidth: 315)
+                            .cornerRadius(45)
+                        
+                        Image("images/iPhone 16 Pro - Natural Titanium - Portrait.png")
+                            .resizable()
+                            .frame(maxWidth: 350)
+                    }
+                }
+                .padding()
+                .background(Color(hex: "#976BF4"))
+                .cornerRadius(60)
+                
+                VStack {
+                    Text("and follow the buzz")
+                        .font(.title4)
+                        .fontWeight(.semibold)
+                        .horizontalAlignment(.center)
+                        .padding()
+                    
+                    Image("images/AppleWatch-Steps.jpeg")
+                        .resizable()
+                        .frame(maxWidth: 315)
+                }
+                .padding(.top)
+                .background(Color(hex: "#FDE04A"))
+                .cornerRadius(60)
+            }
+            .columns(2)
         }
     }
 }
